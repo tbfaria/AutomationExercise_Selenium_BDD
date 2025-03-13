@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 18.83 s <<< FAILURE! -- in runner.TestRunner
+General View.Validate general user is able to view products without loggin in -- Time elapsed: 0.406 s <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User navigates to Online product page' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given("User navigates to Online product page")
+public void user_navigates_to_online_product_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
