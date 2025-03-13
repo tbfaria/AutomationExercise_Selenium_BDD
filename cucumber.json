@@ -1,0 +1,85 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2025-03-17T15:48:31.597Z",
+        "line": 3,
+        "name": "Successfully register and delete a user",
+        "description": "",
+        "id": "register-and-delete-user;successfully-register-and-delete-a-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9280962300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user navigates to the signup page",
+            "match": {
+              "location": "stepDefinition.HomePage.userNavigatesToTheSignupPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3334794400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "creates a new account",
+            "match": {
+              "location": "stepDefinition.LoginPage.createsANewAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 28598158800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is successfully created",
+            "match": {
+              "location": "stepDefinition.SignupPage.theUserIsSuccessfullyCreated()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17240054900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I delete the created user",
+            "match": {
+              "location": "stepDefinition.HomePage.iDeleteTheCreatedUser()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[data-qa\u003d\u0027account-deleted\u0027]\"}\n  (Session info: chrome\u003d134.0.6998.89)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.29.0\u0027, revision: \u00275fc1ec94cb\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [523987b460cbb289a59511f6f4a85713, findElement {using\u003dcss selector, value\u003d[data-qa\u003d\u0027account-deleted\u0027]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\\Users\\Tome\\AppData\\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52697}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52697/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 523987b460cbb289a59511f6f4a85713\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)\r\n\tat pages.AccountDeletedPage.isAccountDeletedVisible(AccountDeletedPage.java:12)\r\n\tat stepDefinition.AccountDeletedPage.theUserIsSuccessfullyRemoved(AccountDeletedPage.java:8)\r\n\tat ✽.the user is successfully removed(file:///C:/Users/Tome/IdeaProjects/SeleniumCucWDM%20AutoExer/src/test/java/features/RegisterAndDeleteUser.feature:8)\r\n",
+              "duration": 104243000,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "the user is successfully removed",
+            "match": {
+              "location": "stepDefinition.AccountDeletedPage.theUserIsSuccessfullyRemoved()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Register and delete user",
+    "description": "",
+    "id": "register-and-delete-user",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/RegisterAndDeleteUser.feature",
+    "tags": []
+  }
+]
