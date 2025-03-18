@@ -21,7 +21,7 @@ public class SignupPage extends BrowserDriver {
     public static String city_xpath = "//input[@id='city']";
     public static String zipCode_xpath = "//input[@id='zipcode']";
     public static String mobileNumber_xpath = "//input[@id='mobile_number']";
-    public static String createAccount_btn_xpath = "//button[normalize-space()='Create Account']";
+    public static String createAccount_btn_css = "[data-qa='create-account']";
 
     public static String name_data = "Norman E. Sargent";
     public static String email_data = "NormanESargent@teleworm.us";
@@ -47,7 +47,6 @@ public class SignupPage extends BrowserDriver {
     }
 
     public static void new_user_signup() throws InterruptedException{
-
         driver.findElement(By.xpath(mr_radio_xpath)).click();
         driver.findElement(By.xpath(name_xpath)).clear();
         driver.findElement(By.xpath(name_xpath)).sendKeys(name_data);
@@ -71,12 +70,12 @@ public class SignupPage extends BrowserDriver {
 
     public static void click_createAccount_btn() throws InterruptedException {
         // navigates until de button is visible
-        WebElement footer = driver.findElement(By.cssSelector("[data-qa='create-account']"));
+        WebElement footer = driver.findElement(By.cssSelector(createAccount_btn_css));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", footer);
     }
 
     public static void click_continueCreateAccount_btn() throws InterruptedException {
-        driver.findElement(By.cssSelector("[data-qa='create-account']")).click();
+        driver.findElement(By.cssSelector(createAccount_btn_css)).click();
     }
 
     public static void isAccountCreatedVisible() throws InterruptedException {

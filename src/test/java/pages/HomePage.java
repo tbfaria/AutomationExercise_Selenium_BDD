@@ -15,7 +15,6 @@ public class HomePage extends BrowserDriver {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get(homepage);
-        //Thread.sleep(2000);
         driver.findElement(By.className(cookie_consent_class)).click();
     }
 
@@ -26,18 +25,13 @@ public class HomePage extends BrowserDriver {
     }
 
     public static void click_signIn_link() throws InterruptedException {
-        //Thread.sleep(2000);
         driver.findElement(By.linkText(signIn_link_linktext)).click();
     }
 
     public static void click_deleteAccount_link() throws InterruptedException {
-        //Thread.sleep(2000);
         driver.findElement(By.linkText(deleteAccount_link_linktext)).click();
     }
 
-    public static void click_accountDeleteContinue_btn() throws InterruptedException {
-        driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/div/a")).click();
-    }
 
 
 }

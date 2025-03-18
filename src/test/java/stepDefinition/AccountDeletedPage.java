@@ -6,6 +6,6 @@ public class AccountDeletedPage {
     @Then("the user is successfully removed")
     public void theUserIsSuccessfullyRemoved() throws InterruptedException{
         isAccountDeletedVisible();
-        click_accountCreatedContinue_btn();
+        click_accountDeletedContinue_btn();
     }
 }

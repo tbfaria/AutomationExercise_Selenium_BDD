@@ -1,10 +1,9 @@
 package stepDefinition;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 
+import static pages.AccountDeletedPage.click_accountDeleteContinue_btn;
 import static pages.HomePage.*;
-import static pages.SignupPage.*;
 public class HomePage {
 
     @Given("user navigates to the signup page")
@@ -17,7 +16,7 @@ public class HomePage {
     @And("I delete the created user")
     public void iDeleteTheCreatedUser() throws InterruptedException{
         click_deleteAccount_link();
-        click_accountDeleteContinue_btn();
+        //click_accountDeleteContinue_btn();
     }
 
 
