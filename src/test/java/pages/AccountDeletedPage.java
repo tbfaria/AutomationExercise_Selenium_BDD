@@ -1,8 +1,6 @@
 package pages;
-
 import org.openqa.selenium.By;
 import utility.BrowserDriver;
-
 import static org.junit.Assert.assertEquals;
 
 public class AccountDeletedPage extends BrowserDriver {

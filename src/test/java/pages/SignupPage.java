@@ -13,8 +13,14 @@ public class SignupPage extends BrowserDriver {
     public static String birthDay_xpath = "//select[@id='days']";
     public static String birthMonth_xpath = "//select[@id='months']";
     public static String birthYear_xpath = "//select[@id='years']";
+    public static String newsletter_xpath = "//input[@id='newsletter']";
+
+    public static String specialOffers_xpath = " //input[@id='optin']";
+
+
     public static String firstName_xpath = "//input[@id='first_name']";
     public static String lastName_xpath = "//input[@id='last_name']";
+
     public static String address_xpath = "//input[@id='address1']";
     public static String country_xpath = "//select[@id='country']";
     public static String state_xpath = "//input[@id='state']";
@@ -22,6 +28,8 @@ public class SignupPage extends BrowserDriver {
     public static String zipCode_xpath = "//input[@id='zipcode']";
     public static String mobileNumber_xpath = "//input[@id='mobile_number']";
     public static String createAccount_btn_css = "[data-qa='create-account']";
+    public static String createAccount_btn_xpath = "//button[normalize-space()='Create Account']";
+
 
     public static String name_data = "Norman E. Sargent";
     public static String email_data = "NormanESargent@teleworm.us";
@@ -56,6 +64,13 @@ public class SignupPage extends BrowserDriver {
         new Select(driver.findElement(By.xpath(birthMonth_xpath))).selectByIndex(birth_month_data);
         new Select(driver.findElement(By.xpath(birthYear_xpath))).selectByValue(birth_year_data);
 
+        // navigates until checkbox is visible
+        WebElement checkbox = driver.findElement(By.xpath(newsletter_xpath));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", checkbox);
+
+        driver.findElement(By.xpath(newsletter_xpath)).click();
+        driver.findElement(By.xpath(specialOffers_xpath)).click();
+
         driver.findElement(By.xpath(firstName_xpath)).sendKeys(firstName_data);
         driver.findElement(By.xpath(lastName_xpath)).sendKeys(lastName_data);
         driver.findElement(By.xpath(address_xpath)).sendKeys(address_data);
@@ -69,13 +84,13 @@ public class SignupPage extends BrowserDriver {
     }
 
     public static void click_createAccount_btn() throws InterruptedException {
-        // navigates until de button is visible
-        WebElement footer = driver.findElement(By.cssSelector(createAccount_btn_css));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", footer);
+        // navigates until the button is visible
+        WebElement button = driver.findElement(By.xpath(createAccount_btn_xpath));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);
     }
 
     public static void click_continueCreateAccount_btn() throws InterruptedException {
-        driver.findElement(By.cssSelector(createAccount_btn_css)).click();
+        driver.findElement(By.xpath(createAccount_btn_xpath)).click();
     }
 
     public static void isAccountCreatedVisible() throws InterruptedException {
@@ -87,7 +102,5 @@ public class SignupPage extends BrowserDriver {
     public static void click_accountCreatedContinue_btn() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/div/a")).click();
     }
-
-
 
 }

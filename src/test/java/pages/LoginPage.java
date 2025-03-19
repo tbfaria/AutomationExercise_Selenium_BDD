@@ -7,10 +7,10 @@ public class LoginPage extends BrowserDriver {
     public static String username_text_xpath = "//input[@placeholder='Name']";
     public static String email_text_xpath = "//input[@data-qa='signup-email']";
     public static String signup_btn_xpath = "//button[normalize-space()='Signup']";
-    public static String newUser_xpath = "//*[@id=\"form\"]/div/div/div[3]/div/h2";
+    public static String newUser_text_xpath = "//h2[normalize-space()='New User Signup!']";
 
     public static void visibility_newUser() throws InterruptedException{
-        String actualText = driver.findElement(By.xpath(newUser_xpath)).getText();
+        String actualText = driver.findElement(By.xpath(newUser_text_xpath)).getText();
         assertEquals(actualText, "New User Signup!");
     }
 
